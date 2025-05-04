@@ -2,7 +2,7 @@
 
 🖥️ Atualmente sou estudande de Análise e Desenvolvimento de Sistemas na UNICSUL (Universidade Cruzeiro do Sul). Me interesso tanto por front, quanto por back-end, e minhas principais linguagens são Java e JavaScript. Além disso, busco sempre estar atualizado na área da tecnologia, pois amo aprender e utilizar meu conhecimento para soluções inovadoras!
 
-📧 Email: eric.lps76i@gmail.com
+📧 Email: eric.lwinkelmann@gmail.com
 
 <div style="display: inline_block"><br>
   <img align="center" alt="Eric-Java" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg">
