@@ -1,4 +1,4 @@
-### 👋 Oi! eu sou o Eric!
+### 👋 Salve, eu sou o Eric!
 
 🖥️ Atualmente sou estudande de Análise e Desenvolvimento de Sistemas na UNICSUL (Universidade Cruzeiro do Sul). Me interesso tanto por front, quanto por back-end, e minhas principais linguagens são Java e JavaScript. Além disso, busco sempre estar atualizado na área da tecnologia, pois amo aprender e utilizar meu conhecimento para soluções inovadoras!
 
