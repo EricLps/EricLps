@@ -1,16 +1,17 @@
 ### 👋 Salve, eu sou o Eric!
 
-🖥️ Atualmente sou estudande de Análise e Desenvolvimento de Sistemas na UNICSUL (Universidade Cruzeiro do Sul). Me interesso tanto por front, quanto por back-end, e minhas principais linguagens são Java e JavaScript. Além disso, busco sempre estar atualizado na área da tecnologia, pois amo aprender e utilizar meu conhecimento para soluções inovadoras!
+🖥️ Atualmente sou estudande de Análise e Desenvolvimento de Sistemas na UNICSUL. Me interesso tanto por front, quanto por back-end, e minhas principais linguagens são Java e JavaScript, mas ando me aventurando em C# ultimamente! Além disso, busco sempre estar atualizado na área da tecnologia, pois amo aprender e utilizar meu conhecimento para soluções inovadoras!
 
 📧 Email: eric.lwinkelmann@gmail.com
 
 <div style="display: inline_block"><br>
   <img align="center" alt="Eric-Java" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg">
+  <img align="center" alt="Eric-CSharp" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg">
+  <img align="center" alt="Eric-Python" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg">
   <img align="center" alt="Eric-JavaScript" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg">    
-  <img align="center" alt="Eric-JavaScript" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg">    
+  <img align="center" alt="Eric-React" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg">    
   <img align="center" alt="Eric-HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
   <img align="center" alt="Eric-CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
-  <img align="center" alt="Eric-Python" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg">    
 
 </div>
   
