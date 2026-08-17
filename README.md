@@ -1,6 +1,6 @@
 ### 👋 Salve, eu sou o Eric!
 
-🖥️ Atualmente sou estudande de Análise e Desenvolvimento de Sistemas na UNICSUL. Me interesso tanto por front, quanto por back-end, e minhas principais linguagens são Java e JavaScript, mas ando me aventurando em C# ultimamente! Além disso, busco sempre estar atualizado na área da tecnologia, pois amo aprender e utilizar meu conhecimento para soluções inovadoras!
+🖥️ Atualmente sou estudande de Análise e Desenvolvimento de Sistemas na UNICSUL. Me interesso tanto por front, quanto por back-end, e minhas principais linguagens são Java e C#, mas ando me aventurando em Python ultimamente! Além disso, busco sempre estar atualizado na área da tecnologia, pois amo aprender e utilizar meu conhecimento para soluções inovadoras!
 
 📧 Email: eric.lwinkelmann@gmail.com
 
