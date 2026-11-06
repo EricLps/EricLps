@@ -1,0 +1,155 @@
+// Gera um SVG animado: um morcego em pixel art voa sobre o gráfico de contribuições
+// do GitHub e "come" os quadradinhos com contribuição, um por um.
+//
+// Uso:  node scripts/bat-contrib.mjs <usuario> <pastaDeSaida>
+// Com a variável GITHUB_TOKEN definida, usa a API GraphQL oficial (é o caso no GitHub Actions).
+// Sem token, lê o calendário público da página do perfil (útil para testar no seu PC).
+// Não depende de nenhuma biblioteca: só Node 18+.
+
+import { mkdirSync, writeFileSync } from 'node:fs';
+import { join } from 'node:path';
+
+const [user = 'EricLps', outDir = 'dist'] = process.argv.slice(2);
+
+// ---------- 1. buscar as contribuições ----------
+// Resultado: lista de { week, day, level } com level de 0 (nenhuma) a 4 (muitas).
+
+const LEVELS = { NONE: 0, FIRST_QUARTILE: 1, SECOND_QUARTILE: 2, THIRD_QUARTILE: 3, FOURTH_QUARTILE: 4 };
+
+async function fromGraphQL(token) {
+  const query = `query($login:String!){user(login:$login){contributionsCollection{contributionCalendar{
+    weeks{contributionDays{weekday contributionLevel}}}}}}`;
+  const res = await fetch('https://api.github.com/graphql', {
+    method: 'POST',
+    headers: { Authorization: `bearer ${token}`, 'Content-Type': 'application/json', 'User-Agent': 'bat-contrib' },
+    body: JSON.stringify({ query, variables: { login: user } }),
+  });
+  const json = await res.json();
+  if (!res.ok || json.errors) throw new Error(`GraphQL: ${res.status} ${JSON.stringify(json.errors ?? json)}`);
+  const weeks = json.data.user.contributionsCollection.contributionCalendar.weeks;
+  return weeks.flatMap((w, week) =>
+    w.contributionDays.map(d => ({ week, day: d.weekday, level: LEVELS[d.contributionLevel] ?? 0 })));
+}
+
+async function fromProfilePage() {
+  const res = await fetch(`https://github.com/users/${user}/contributions`, { headers: { 'User-Agent': 'bat-contrib' } });
+  if (!res.ok) throw new Error(`página de contribuições: HTTP ${res.status}`);
+  const html = await res.text();
+  const cells = [];
+  // cada dia é um <td ... id="contribution-day-component-{dia}-{semana}" data-level="N">
+  for (const tag of html.match(/<td[^>]*ContributionCalendar-day[^>]*>/g) ?? []) {
+    const id = tag.match(/contribution-day-component-(\d+)-(\d+)/);
+    const level = tag.match(/data-level="(\d)"/);
+    if (id && level) cells.push({ day: +id[1], week: +id[2], level: +level[1] });
+  }
+  if (!cells.length) throw new Error('não encontrei o calendário na página');
+  return cells;
+}
+
+const token = process.env.GITHUB_TOKEN;
+const cells = token ? await fromGraphQL(token) : await fromProfilePage();
+const weeks = Math.max(...cells.map(c => c.week)) + 1;
+
+// ---------- 2. geometria ----------
+
+const CELL = 11, STEP = 14, PAD_X = 30, PAD_Y = 26;
+const W = PAD_X * 2 + weeks * STEP - (STEP - CELL);
+const H = PAD_Y * 2 + 7 * STEP - (STEP - CELL);
+const cx = c => PAD_X + c.week * STEP + CELL / 2;
+const cy = c => PAD_Y + c.day * STEP + CELL / 2;
+
+// ---------- 3. rota do morcego ----------
+// Visita só os dias com contribuição, semana por semana, em zigue-zague (como a cobra).
+
+const targets = cells
+  .filter(c => c.level > 0)
+  .sort((a, b) => a.week - b.week || (a.week % 2 ? b.day - a.day : a.day - b.day));
+
+const start = { x: -40, y: PAD_Y + 3 * STEP };
+const end = { x: W + 40, y: PAD_Y + 3 * STEP };
+const points = [start, ...targets.map(c => ({ x: cx(c), y: cy(c), cell: c })), end];
+
+const SPEED = 140;           // pixels por segundo
+const EAT_PAUSE = 0.12;      // segundos parado em cada quadrado
+const HOLD = 2.5;            // segundos com o gráfico vazio antes de recomeçar
+let t = 0;
+const timeline = [{ ...points[0], t: 0 }];
+for (let i = 1; i < points.length; i++) {
+  const a = points[i - 1], b = points[i];
+  t += Math.hypot(b.x - a.x, b.y - a.y) / SPEED;
+  timeline.push({ ...b, t });
+  if (b.cell) { t += EAT_PAUSE; timeline.push({ ...b, t, pause: true }); }
+}
+const DUR = Math.max(t + HOLD, 6);
+const pct = s => +(s / DUR * 100).toFixed(3);
+
+// ---------- 4. o morcego (pixel art, 15x7, dois quadros de asa) ----------
+
+const BAT_UP = [
+  'X.............X',
+  'XX....X.X....XX',
+  'XXX...XXX...XXX',
+  '.XXXXXXXXXXXXX.',
+  '..XXXXXXXXXXX..',
+  '.....XXXXX.....',
+  '......X.X......',
+];
+const BAT_DOWN = [
+  '......X.X......',
+  '......XXX......',
+  '...XXXXXXXXX...',
+  '.XXXXXXXXXXXXX.',
+  'XXXXX.XXX.XXXXX',
+  'XX.....X.....XX',
+  'X.............X',
+];
+const PX = 3;
+const pixels = (grid) => grid.flatMap((row, y) =>
+  [...row].map((ch, x) => ch === 'X' ? `M${x * PX},${y * PX}h${PX}v${PX}h-${PX}z` : '')).join('');
+const BAT_W = 15 * PX, BAT_H = 7 * PX;
+
+// ---------- 5. montar o SVG ----------
+
+function build(theme) {
+  const pal = theme === 'dark'
+    ? { empty: '#1c1726', levels: ['#1c1726', '#3d1633', '#6e1534', '#a8162f', '#ff2d3c'], bat: '#4a2c63', glow: '#ff2d3c99', eye: '#ff3a46' }
+    : { empty: '#ebedf0', levels: ['#ebedf0', '#f2c4ca', '#e07282', '#c0243a', '#7a0a1e'], bat: '#1a1020', glow: '#00000055', eye: '#ff2d3c' };
+
+  // posição do morcego ao longo do tempo
+  const batFrames = timeline.map(p =>
+    `${pct(p.t)}%{transform:translate(${(p.x - BAT_W / 2).toFixed(1)}px,${(p.y - BAT_H / 2 - 4).toFixed(1)}px)}`).join('');
+
+  // cada quadrado com contribuição some quando o morcego chega e volta no fim do ciclo
+  let css = '';
+  const eaten = targets.map((c, i) => {
+    const arrive = timeline.find(p => p.cell === c && !p.pause).t;
+    const a = pct(arrive), b = pct(arrive + 0.15);
+    css += `.c${i}{animation:e${i} ${DUR.toFixed(2)}s linear infinite}@keyframes e${i}{0%,${a}%{opacity:1}${b}%,97%{opacity:0}100%{opacity:1}}`;
+    return `<rect class="c${i}" x="${cx(c) - CELL / 2}" y="${cy(c) - CELL / 2}" width="${CELL}" height="${CELL}" rx="2" fill="${pal.levels[c.level]}"/>`;
+  });
+
+  const empties = cells.map(c =>
+    `<rect x="${cx(c) - CELL / 2}" y="${cy(c) - CELL / 2}" width="${CELL}" height="${CELL}" rx="2" fill="${pal.empty}"/>`);
+
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Morcego comendo o gráfico de contribuições de ${user}">
+<style>
+.bat{animation:fly ${DUR.toFixed(2)}s linear infinite;filter:drop-shadow(0 0 2px ${pal.glow})}
+@keyframes fly{${batFrames}}
+.up{animation:wu .3s steps(1) infinite}.down{animation:wd .3s steps(1) infinite}
+@keyframes wu{0%{opacity:1}50%{opacity:0}}@keyframes wd{0%{opacity:0}50%{opacity:1}}
+${css}
+</style>
+<g>${empties.join('')}</g>
+<g>${eaten.join('')}</g>
+<g class="bat" shape-rendering="crispEdges">
+  <path class="up" d="${pixels(BAT_UP)}" fill="${pal.bat}"/>
+  <path class="down" d="${pixels(BAT_DOWN)}" fill="${pal.bat}"/>
+  <path d="M${6 * PX},${2 * PX}h${PX}v${PX}h-${PX}zM${8 * PX},${2 * PX}h${PX}v${PX}h-${PX}z" fill="${pal.eye}"/>
+</g>
+</svg>`;
+}
+
+mkdirSync(outDir, { recursive: true });
+writeFileSync(join(outDir, 'bat-contrib-dark.svg'), build('dark'));
+writeFileSync(join(outDir, 'bat-contrib.svg'), build('light'));
+console.log(`${user}: ${cells.length} dias, ${targets.length} com contribuição, ciclo de ${DUR.toFixed(1)}s -> ${outDir}`);

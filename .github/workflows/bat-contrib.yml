@@ -1,0 +1,37 @@
+# Gera, todo dia, a animação do morcego comendo o gráfico de contribuições
+# e publica os SVGs na branch `output`.
+name: Bat contributions
+
+on:
+  schedule:
+    - cron: "0 3 * * *"   # todo dia às 00h (horário de Brasília)
+  workflow_dispatch:       # botão "Run workflow" para rodar na hora
+  push:
+    branches: [main]
+
+permissions:
+  contents: write          # precisa escrever na branch `output`
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Gerar SVGs do morcego
+        run: node scripts/bat-contrib.mjs "${{ github.repository_owner }}" dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Publicar na branch output
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
