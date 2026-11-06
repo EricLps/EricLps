@@ -3,6 +3,10 @@
 </p>
 
 <p align="center">
+  <img src="./assets/bats-flock.svg" alt="" width="100%"/>
+</p>
+
+<p align="center">
   <a href="https://git.io/typing-svg">
     <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=9D6BE0&center=true&vCenter=true&width=620&lines=Back-end+Developer+%F0%9F%A6%87;Java+%7C+Spring+Boot+%7C+JPA+%7C+SQL;Node.js+%7C+Express+%7C+TypeScript;Codando+depois+da+meia-noite+%F0%9F%8C%99" alt="Typing SVG"/>
   </a>
@@ -16,7 +20,7 @@
 
 ---
 
-## 🦇 Sobre mim
+## <img src="./assets/bat.svg" alt="" height="32" align="center"/> Sobre mim
 
 ```java
 public class Eric {
@@ -29,7 +33,7 @@ public class Eric {
 }
 ```
 
-## 🌙 Stack
+## <img src="./assets/bat.svg" alt="" height="32" align="center"/> Stack
 
 <p align="center">
   <b>Linguagens</b><br/><br/>

@@ -6,8 +6,13 @@
 // Sem token, lê o calendário público da página do perfil (útil para testar no seu PC).
 // Não depende de nenhuma biblioteca: só Node 18+.
 
-import { mkdirSync, writeFileSync } from 'node:fs';
-import { join } from 'node:path';
+import { mkdirSync, writeFileSync, readFileSync } from 'node:fs';
+import { join, dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+// sprite do morcego (pixel art com fundo transparente), embutido no SVG
+const HERE = dirname(fileURLToPath(import.meta.url));
+const BAT_PNG = readFileSync(join(HERE, '..', 'assets', 'bat-sprite.png')).toString('base64');
 
 const [user = 'EricLps', outDir = 'dist'] = process.argv.slice(2);
 
@@ -82,8 +87,8 @@ const start = { x: -40, y: PAD_Y + 3 * STEP };
 const end = { x: W + 40, y: PAD_Y + 3 * STEP };
 const points = [start, ...targets.map(c => ({ x: cx(c), y: cy(c), cell: c })), end];
 
-const SPEED = 300;           // pixels por segundo (rápido: na ordem aleatória ele cruza o gráfico várias vezes)
-const EAT_PAUSE = 0.12;      // segundos parado em cada quadrado
+const SPEED = 110;           // pixels por segundo (devagar, voo tranquilo)
+const EAT_PAUSE = 0.35;      // segundos parado em cada quadrado, "comendo"
 const HOLD = 2.5;            // segundos com o gráfico vazio antes de recomeçar
 let t = 0;
 const timeline = [{ ...points[0], t: 0 }];
@@ -96,37 +101,16 @@ for (let i = 1; i < points.length; i++) {
 const DUR = Math.max(t + HOLD, 6);
 const pct = s => +(s / DUR * 100).toFixed(3);
 
-// ---------- 4. o morcego (pixel art, 15x7, dois quadros de asa) ----------
+// ---------- 4. o morcego (sprite em pixel art, proporção 512x248) ----------
 
-const BAT_UP = [
-  'X.............X',
-  'XX....X.X....XX',
-  'XXX...XXX...XXX',
-  '.XXXXXXXXXXXXX.',
-  '..XXXXXXXXXXX..',
-  '.....XXXXX.....',
-  '......X.X......',
-];
-const BAT_DOWN = [
-  '......X.X......',
-  '......XXX......',
-  '...XXXXXXXXX...',
-  '.XXXXXXXXXXXXX.',
-  'XXXXX.XXX.XXXXX',
-  'XX.....X.....XX',
-  'X.............X',
-];
-const PX = 3;
-const pixels = (grid) => grid.flatMap((row, y) =>
-  [...row].map((ch, x) => ch === 'X' ? `M${x * PX},${y * PX}h${PX}v${PX}h-${PX}z` : '')).join('');
-const BAT_W = 15 * PX, BAT_H = 7 * PX;
+const BAT_W = 56, BAT_H = Math.round(56 * 248 / 512);
 
 // ---------- 5. montar o SVG ----------
 
 function build(theme) {
   const pal = theme === 'dark'
-    ? { empty: '#1c1726', levels: ['#1c1726', '#3d1633', '#6e1534', '#a8162f', '#ff2d3c'], bat: '#4a2c63', glow: '#ff2d3c99', eye: '#ff3a46' }
-    : { empty: '#ebedf0', levels: ['#ebedf0', '#f2c4ca', '#e07282', '#c0243a', '#7a0a1e'], bat: '#1a1020', glow: '#00000055', eye: '#ff2d3c' };
+    ? { empty: '#1c1726', levels: ['#1c1726', '#3d1633', '#6e1534', '#a8162f', '#ff2d3c'], glow: '#c9a6ff88' }
+    : { empty: '#ebedf0', levels: ['#ebedf0', '#f2c4ca', '#e07282', '#c0243a', '#7a0a1e'], glow: '#00000040' };
 
   // posição do morcego ao longo do tempo
   const batFrames = timeline.map(p =>
@@ -148,17 +132,16 @@ function build(theme) {
 <style>
 .bat{animation:fly ${DUR.toFixed(2)}s linear infinite;filter:drop-shadow(0 0 2px ${pal.glow})}
 @keyframes fly{${batFrames}}
-.up{animation:wu .3s steps(1) infinite}.down{animation:wd .3s steps(1) infinite}
-@keyframes wu{0%{opacity:1}50%{opacity:0}}@keyframes wd{0%{opacity:0}50%{opacity:1}}
+/* bater de asas: o sprite "achata" em dois quadros, como num jogo antigo */
+.flap{transform-box:fill-box;transform-origin:50% 60%;animation:flap .5s steps(1) infinite}
+@keyframes flap{0%{transform:scale(1,1)}50%{transform:scale(.92,.55)}}
 ${css}
 </style>
 <g>${empties.join('')}</g>
 <g>${eaten.join('')}</g>
-<g class="bat" shape-rendering="crispEdges">
-  <path class="up" d="${pixels(BAT_UP)}" fill="${pal.bat}"/>
-  <path class="down" d="${pixels(BAT_DOWN)}" fill="${pal.bat}"/>
-  <path d="M${6 * PX},${2 * PX}h${PX}v${PX}h-${PX}zM${8 * PX},${2 * PX}h${PX}v${PX}h-${PX}z" fill="${pal.eye}"/>
-</g>
+<g class="bat"><g class="flap">
+  <image href="data:image/png;base64,${BAT_PNG}" width="${BAT_W}" height="${BAT_H}" style="image-rendering:pixelated"/>
+</g></g>
 </svg>`;
 }
 
