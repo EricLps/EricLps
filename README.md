@@ -4,14 +4,14 @@
 
 <p align="center">
   <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=FF5A1A&center=true&vCenter=true&width=620&lines=Back-end+Developer+%F0%9F%90%89;Java+%7C+Spring+Boot+%7C+JPA+%7C+SQL;Node.js+%7C+Express+%7C+TypeScript;Forjando+o+pr%C3%B3ximo+deploy+%F0%9F%94%A5" alt="Typing SVG"/>
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=9D6BE0&center=true&vCenter=true&width=620&lines=Back-end+Developer+%F0%9F%A6%87;Java+%7C+Spring+Boot+%7C+JPA+%7C+SQL;Node.js+%7C+Express+%7C+TypeScript;Codando+depois+da+meia-noite+%F0%9F%8C%99" alt="Typing SVG"/>
   </a>
 </p>
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/eric-lopes1"><img src="https://img.shields.io/badge/LinkedIn-0d0405?style=for-the-badge&logo=linkedin&logoColor=FF5A1A" alt="LinkedIn"/></a>
-  <a href="mailto:eric.lwinkelmann@gmail.com"><img src="https://img.shields.io/badge/Email-0d0405?style=for-the-badge&logo=gmail&logoColor=FF5A1A" alt="Email"/></a>
-  <img src="https://komarev.com/ghpvc/?username=EricLps&color=b81d0b&style=for-the-badge&label=VISITANTES" alt="Visitantes"/>
+  <a href="https://www.linkedin.com/in/eric-lopes1"><img src="https://img.shields.io/badge/LinkedIn-0d0714?style=for-the-badge&logo=linkedin&logoColor=9D6BE0" alt="LinkedIn"/></a>
+  <a href="mailto:eric.lwinkelmann@gmail.com"><img src="https://img.shields.io/badge/Email-0d0714?style=for-the-badge&logo=gmail&logoColor=9D6BE0" alt="Email"/></a>
+  <img src="https://komarev.com/ghpvc/?username=EricLps&color=6b3fa0&style=for-the-badge&label=VISITANTES" alt="Visitantes"/>
 </p>
 
 ---
@@ -29,7 +29,7 @@ public class Eric {
 }
 ```
 
-## 🔥 Stack
+## 🌙 Stack
 
 <p align="center">
   <b>Linguagens</b><br/><br/>
@@ -66,12 +66,12 @@ public class Eric {
 ## 📊 Estatísticas
 
 <p align="center">
-  <img height="170" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=EricLps&theme=github_dark" alt="Estatísticas"/>
-  <img height="170" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=EricLps&theme=github_dark" alt="Linguagens dos repositórios"/>
+  <img height="170" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=EricLps&theme=dracula" alt="Estatísticas"/>
+  <img height="170" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=EricLps&theme=dracula" alt="Linguagens dos repositórios"/>
 </p>
 
 <p align="center">
-  <img src="https://streak-stats.demolab.com?user=EricLps&background=0D0405&border=4A0D08&ring=FF5A1A&fire=FF7B1C&currStreakNum=E9D6C6&sideNums=E9D6C6&currStreakLabel=FF5A1A&sideLabels=FF8C42&dates=8B6F5E&stroke=4A0D08" alt="Sequência de commits"/>
+  <img src="https://streak-stats.demolab.com?user=EricLps&background=0D0714&border=3A2550&ring=9D6BE0&fire=B48EE0&currStreakNum=E6DDF2&sideNums=E6DDF2&currStreakLabel=9D6BE0&sideLabels=B48EE0&dates=7E6A92&stroke=3A2550" alt="Sequência de commits"/>
 </p>
 
 <p align="center">
@@ -83,6 +83,5 @@ public class Eric {
 </p>
 
 <p align="center">
-  <img src="./assets/fire-line.svg" width="100%" alt=""/>
+  <img src="./assets/blood-line.svg" width="100%" alt=""/>
 </p>
-

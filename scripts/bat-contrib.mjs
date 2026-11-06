@@ -59,17 +59,30 @@ const cx = c => PAD_X + c.week * STEP + CELL / 2;
 const cy = c => PAD_Y + c.day * STEP + CELL / 2;
 
 // ---------- 3. rota do morcego ----------
-// Visita só os dias com contribuição, semana por semana, em zigue-zague (como a cobra).
+// Visita só os dias com contribuição, numa ordem aleatória que muda a cada dia.
+// A "semente" é a data de hoje: no mesmo dia a ordem é sempre a mesma (o arquivo não muda à toa).
 
-const targets = cells
-  .filter(c => c.level > 0)
-  .sort((a, b) => a.week - b.week || (a.week % 2 ? b.day - a.day : a.day - b.day));
+function seededRandom(seed) {           // gerador simples (mulberry32): mesma semente -> mesma sequência
+  return () => {
+    seed = (seed + 0x6D2B79F5) | 0;
+    let t = Math.imul(seed ^ (seed >>> 15), 1 | seed);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+const random = seededRandom(Number(new Date().toISOString().slice(0, 10).replaceAll('-', '')));
+
+const targets = cells.filter(c => c.level > 0);
+for (let i = targets.length - 1; i > 0; i--) {   // embaralhamento de Fisher-Yates
+  const j = Math.floor(random() * (i + 1));
+  [targets[i], targets[j]] = [targets[j], targets[i]];
+}
 
 const start = { x: -40, y: PAD_Y + 3 * STEP };
 const end = { x: W + 40, y: PAD_Y + 3 * STEP };
 const points = [start, ...targets.map(c => ({ x: cx(c), y: cy(c), cell: c })), end];
 
-const SPEED = 140;           // pixels por segundo
+const SPEED = 300;           // pixels por segundo (rápido: na ordem aleatória ele cruza o gráfico várias vezes)
 const EAT_PAUSE = 0.12;      // segundos parado em cada quadrado
 const HOLD = 2.5;            // segundos com o gráfico vazio antes de recomeçar
 let t = 0;
