@@ -16,7 +16,7 @@
 
 ---
 
-## 🐉 Sobre mim
+## 🦇 Sobre mim
 
 ```java
 public class Eric {
@@ -59,7 +59,7 @@ public class Eric {
 | 📦 [Stock API](https://github.com/EricLps/StockApi) | C# · ASP.NET Core · EF Core · SQL Server | Controle de estoque em camadas, migrations e logs com Serilog |
 | 🖼️ [Esteganografia](https://github.com/EricLps/esteganografia-java) | Java · POO | Esconde e extrai mensagens em imagens com a técnica LSB |
 
-### 🥚 Na forja agora
+### 💻 Trabalhando atualmente
 - 🎨 Plugin para IntelliJ que troca os ícones das classes conforme a camada (Repository, Service, Controller...)
 - 💪 App fitness em Spring Boot + Angular
 
@@ -74,8 +74,6 @@ public class Eric {
   <img src="https://streak-stats.demolab.com?user=EricLps&background=0D0405&border=4A0D08&ring=FF5A1A&fire=FF7B1C&currStreakNum=E9D6C6&sideNums=E9D6C6&currStreakLabel=FF5A1A&sideLabels=FF8C42&dates=8B6F5E&stroke=4A0D08" alt="Sequência de commits"/>
 </p>
 
-## 🦇 O morcego devorando meus commits
-
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/EricLps/EricLps/output/bat-contrib-dark.svg"/>
@@ -88,4 +86,3 @@ public class Eric {
   <img src="./assets/fire-line.svg" width="100%" alt=""/>
 </p>
 
-<p align="center"><i>"Todo dragão já foi um ovo."</i> 🥚🔥</p>
