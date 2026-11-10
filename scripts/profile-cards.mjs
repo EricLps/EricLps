@@ -34,16 +34,16 @@ async function gql(query, variables) {
 }
 
 async function fetchData() {
-  // perfil + repositórios próprios (sem forks)
+  // perfil + repositórios próprios (estrelas contam forks; linguagens não)
   let repos = [], cursor = null, info;
   do {
     const d = await gql(`query($login:String!,$cursor:String){user(login:$login){
       createdAt
       pullRequests{totalCount}
       issues{totalCount}
-      repositoriesContributedTo(contributionTypes:[COMMIT,ISSUE,PULL_REQUEST,REPOSITORY]){totalCount}
-      repositories(first:100,after:$cursor,ownerAffiliations:OWNER,isFork:false){
-        nodes{stargazerCount primaryLanguage{name color}}
+      repositoriesContributedTo(contributionTypes:[COMMIT,ISSUE,PULL_REQUEST,REPOSITORY],includeUserRepositories:true){totalCount}
+      repositories(first:100,after:$cursor,ownerAffiliations:OWNER){
+        nodes{isFork stargazerCount primaryLanguage{name color}}
         pageInfo{hasNextPage endCursor}}}}`, { login: user, cursor });
     info = d.user;
     repos.push(...info.repositories.nodes);
@@ -77,7 +77,7 @@ async function fetchData() {
     prs: info.pullRequests.totalCount,
     issues: info.issues.totalCount,
     contributedTo: info.repositoriesContributedTo.totalCount,
-    repos,
+    repos: repos.filter(r => !r.isFork),
     days,
   };
 }
