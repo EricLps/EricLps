@@ -72,12 +72,12 @@ public class Eric {
 ## 📊 Estatísticas
 
 <p align="center">
-  <img height="170" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=EricLps&theme=dracula" alt="Estatísticas"/>
-  <img height="170" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=EricLps&theme=dracula" alt="Linguagens dos repositórios"/>
+  <img height="170" src="https://raw.githubusercontent.com/EricLps/EricLps/output/stats.svg" alt="Estatísticas"/>
+  <img height="170" src="https://raw.githubusercontent.com/EricLps/EricLps/output/languages.svg" alt="Linguagens dos repositórios"/>
 </p>
 
 <p align="center">
-  <img src="https://streak-stats.demolab.com?user=EricLps&background=0D0714&border=3A2550&ring=9D6BE0&fire=B48EE0&currStreakNum=E6DDF2&sideNums=E6DDF2&currStreakLabel=9D6BE0&sideLabels=B48EE0&dates=7E6A92&stroke=3A2550" alt="Sequência de commits"/>
+  <img src="https://raw.githubusercontent.com/EricLps/EricLps/output/streak.svg" alt="Sequência de commits"/>
 </p>
 
 <p align="center">
