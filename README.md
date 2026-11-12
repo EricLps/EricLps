@@ -64,8 +64,11 @@ public class Eric {
 | 🖼️ [Esteganografia](https://github.com/EricLps/esteganografia-java) | Java · POO | Esconde e extrai mensagens em imagens com a técnica LSB |
 
 ### 💻 Trabalhando atualmente
+
 - 🎨 Plugin para IntelliJ que troca os ícones das classes conforme a camada (Repository, Service, Controller...)
+
 - 💪 App fitness em Spring Boot + Angular
+
 
 ## 📊 Estatísticas
 
