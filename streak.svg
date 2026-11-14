@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="495" height="195" viewBox="0 0 495 195" role="img" aria-label="Sequência de contribuições de EricLps">
+<style>
+text{font-family:'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif}
+.fade{opacity:0;animation:fade .7s ease-out forwards}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.n{opacity:0}
+@keyframes on{to{opacity:1}}
+@keyframes off{to{opacity:0}}
+.ring{fill:none;stroke:#9D6BE0;stroke-width:5;stroke-linecap:round;stroke-dasharray:251;stroke-dashoffset:251;
+  transform-origin:247.5px 71px;transform:rotate(-90deg);
+  animation:fill 1.4s ease-out .2s forwards, pulse 2.4s ease-in-out 1.6s infinite}
+@keyframes fill{to{stroke-dashoffset:0}}
+@keyframes pulse{0%,100%{stroke:#9D6BE0;stroke-width:5}50%{stroke:#C9A3FF;stroke-width:6.5}}
+.fire{fill:#B48EE0;transform-origin:247.5px 41px;animation:flicker .9s ease-in-out infinite}
+@keyframes flicker{0%,100%{transform:scale(1,1) rotate(0)}25%{transform:scale(.9,1.1) rotate(-5deg)}
+  50%{transform:scale(1.06,.94) rotate(4deg)}75%{transform:scale(.95,1.07) rotate(-2deg)}}</style>
+<rect x="0.5" y="0.5" rx="8" width="494" height="194" fill="#0D0714" stroke="#3A2550"/>
+
+<line x1="165" y1="28" x2="165" y2="170" stroke="#3A2550"/>
+<line x1="330" y1="28" x2="330" y2="170" stroke="#3A2550"/>
+
+<text class="n" x="82.5" y="80" fill="#E6DDF2" font-size="28" font-weight="700" text-anchor="middle" style="animation:on .001s 0.300s forwards, off .001s 0.373s forwards">0</text><text class="n" x="82.5" y="80" fill="#E6DDF2" font-size="28" font-weight="700" text-anchor="middle" style="animation:on .001s 0.373s forwards, off .001s 0.447s forwards">32</text><text class="n" x="82.5" y="80" fill="#E6DDF2" font-size="28" font-weight="700" text-anchor="middle" style="animation:on .001s 0.447s forwards, off .001s 0.520s forwards">59</text><text class="n" x="82.5" y="80" fill="#E6DDF2" font-size="28" font-weight="700" text-anchor="middle" style="animation:on .001s 0.520s forwards, off .001s 0.593s forwards">83</text><text class="n" x="82.5" y="80" fill="#E6DDF2" font-size="28" font-weight="700" text-anchor="middle" style="animation:on .001s 0.593s forwards, off .001s 0.667s forwards">104</text><text class="n" x="82.5" y="80" fill="#E6DDF2" font-size="28" font-weight="700" text-anchor="middle" style="animation:on .001s 0.667s forwards, off .001s 0.740s forwards">122</text><text class="n" x="82.5" y="80" fill="#E6DDF2" font-size="28" font-weight="700" text-anchor="middle" style="animation:on .001s 0.740s forwards, off .001s 0.813s forwards">136</text><text class="n" x="82.5" y="80" fill="#E6DDF2" font-size="28" font-weight="700" text-anchor="middle" style="animation:on .001s 0.813s forwards, off .001s 0.887s forwards">148</text><text class="n" x="82.5" y="80" fill="#E6DDF2" font-size="28" font-weight="700" text-anchor="middle" style="animation:on .001s 0.887s forwards, off .001s 0.960s forwards">158</text><text class="n" x="82.5" y="80" fill="#E6DDF2" font-size="28" font-weight="700" text-anchor="middle" style="animation:on .001s 0.960s forwards, off .001s 1.033s forwards">165</text><text class="n" x="82.5" y="80" fill="#E6DDF2" font-size="28" font-weight="700" text-anchor="middle" style="animation:on .001s 1.033s forwards, off .001s 1.107s forwards">171</text><text class="n" x="82.5" y="80" fill="#E6DDF2" font-size="28" font-weight="700" text-anchor="middle" style="animation:on .001s 1.107s forwards, off .001s 1.180s forwards">175</text><text class="n" x="82.5" y="80" fill="#E6DDF2" font-size="28" font-weight="700" text-anchor="middle" style="animation:on .001s 1.180s forwards, off .001s 1.253s forwards">177</text><text class="n" x="82.5" y="80" fill="#E6DDF2" font-size="28" font-weight="700" text-anchor="middle" style="animation:on .001s 1.253s forwards, off .001s 1.327s forwards">179</text><text class="n" x="82.5" y="80" fill="#E6DDF2" font-size="28" font-weight="700" text-anchor="middle" style="animation:on .001s 1.327s forwards">180</text>
+<g class="fade" style="animation-delay:0.2s">
+  <text x="82.5" y="118" fill="#B48EE0" font-size="14" text-anchor="middle">Contribuições</text>
+  <text x="82.5" y="145" fill="#7E6A92" font-size="12" text-anchor="middle">20 fev 2025 – hoje</text>
+</g>
+<circle class="ring" cx="247.5" cy="71" r="40"/>
+<rect x="234.5" y="22" width="26" height="22" fill="#0D0714"/>
+<path class="fire" d="M247.5 28c-1 4-5 6-5 11a5 5 0 0 0 10 0c0-3-1.5-4.5-2-7-1 2-2 2.5-3 2.5 0-2 .5-4 0-6.5z"/>
+<text class="n" x="247.5" y="81" fill="#E6DDF2" font-size="28" font-weight="700" text-anchor="middle" style="animation:on .001s 0.300s forwards, off .001s 0.471s forwards">0</text><text class="n" x="247.5" y="81" fill="#E6DDF2" font-size="28" font-weight="700" text-anchor="middle" style="animation:on .001s 0.471s forwards, off .001s 0.643s forwards">3</text><text class="n" x="247.5" y="81" fill="#E6DDF2" font-size="28" font-weight="700" text-anchor="middle" style="animation:on .001s 0.643s forwards, off .001s 0.814s forwards">5</text><text class="n" x="247.5" y="81" fill="#E6DDF2" font-size="28" font-weight="700" text-anchor="middle" style="animation:on .001s 0.814s forwards, off .001s 0.986s forwards">7</text><text class="n" x="247.5" y="81" fill="#E6DDF2" font-size="28" font-weight="700" text-anchor="middle" style="animation:on .001s 0.986s forwards, off .001s 1.157s forwards">8</text><text class="n" x="247.5" y="81" fill="#E6DDF2" font-size="28" font-weight="700" text-anchor="middle" style="animation:on .001s 1.157s forwards, off .001s 1.329s forwards">9</text><text class="n" x="247.5" y="81" fill="#E6DDF2" font-size="28" font-weight="700" text-anchor="middle" style="animation:on .001s 1.329s forwards">10</text>
+<g class="fade" style="animation-delay:.5s">
+  <text x="247.5" y="140" fill="#9D6BE0" font-size="14" font-weight="700" text-anchor="middle">Sequência atual</text>
+  <text x="247.5" y="164" fill="#7E6A92" font-size="12" text-anchor="middle">4 nov – 13 nov</text>
+</g>
+
+<text class="n" x="412.5" y="80" fill="#E6DDF2" font-size="28" font-weight="700" text-anchor="middle" style="animation:on .001s 0.450s forwards, off .001s 0.607s forwards">0</text><text class="n" x="412.5" y="80" fill="#E6DDF2" font-size="28" font-weight="700" text-anchor="middle" style="animation:on .001s 0.607s forwards, off .001s 0.764s forwards">3</text><text class="n" x="412.5" y="80" fill="#E6DDF2" font-size="28" font-weight="700" text-anchor="middle" style="animation:on .001s 0.764s forwards, off .001s 0.921s forwards">5</text><text class="n" x="412.5" y="80" fill="#E6DDF2" font-size="28" font-weight="700" text-anchor="middle" style="animation:on .001s 0.921s forwards, off .001s 1.079s forwards">7</text><text class="n" x="412.5" y="80" fill="#E6DDF2" font-size="28" font-weight="700" text-anchor="middle" style="animation:on .001s 1.079s forwards, off .001s 1.236s forwards">8</text><text class="n" x="412.5" y="80" fill="#E6DDF2" font-size="28" font-weight="700" text-anchor="middle" style="animation:on .001s 1.236s forwards, off .001s 1.393s forwards">9</text><text class="n" x="412.5" y="80" fill="#E6DDF2" font-size="28" font-weight="700" text-anchor="middle" style="animation:on .001s 1.393s forwards">10</text>
+<g class="fade" style="animation-delay:0.35s">
+  <text x="412.5" y="118" fill="#B48EE0" font-size="14" text-anchor="middle">Maior sequência</text>
+  <text x="412.5" y="145" fill="#7E6A92" font-size="12" text-anchor="middle">4 nov – 13 nov</text>
+</g>
+</svg>

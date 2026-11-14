@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="180" viewBox="0 0 400 180" role="img" aria-label="Linguagens dos repositórios de EricLps">
+<style>
+text{font-family:'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif}
+.fade{opacity:0;animation:fade .7s ease-out forwards}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.n{opacity:0}
+@keyframes on{to{opacity:1}}
+@keyframes off{to{opacity:0}}@keyframes s0{from{stroke-dasharray:0 100}to{stroke-dasharray:39.20 100}}@keyframes s1{from{stroke-dasharray:0 100}to{stroke-dasharray:29.20 100}}@keyframes s2{from{stroke-dasharray:0 100}to{stroke-dasharray:19.20 100}}@keyframes s3{from{stroke-dasharray:0 100}to{stroke-dasharray:9.20 100}}
+.ringbg{opacity:.18}
+.glow{transform-origin:300px 100px;animation:glow 3.2s ease-in-out 1.82s infinite}
+@keyframes glow{0%,100%{transform:scale(1)}50%{transform:scale(1.035)}}</style>
+<rect x="0.5" y="0.5" rx="8" width="399" height="179" fill="#0D0714" stroke="#3A2550"/>
+
+<text class="fade" x="26" y="34" fill="#9D6BE0" font-size="18" font-weight="600">Linguagens por repositório</text>
+<g class="fade" style="animation-delay:0.30s">
+  <rect x="26" y="56" width="11" height="11" rx="2" fill="#b07219"/>
+  <text x="45" y="66" fill="#B48EE0" font-size="13.5">Java</text>
+  <text x="200" y="66" fill="#7E6A92" font-size="12" text-anchor="end">4 · 40%</text>
+</g>
+<g class="fade" style="animation-delay:0.58s">
+  <rect x="26" y="78" width="11" height="11" rx="2" fill="#f1e05a"/>
+  <text x="45" y="88" fill="#B48EE0" font-size="13.5">JavaScript</text>
+  <text x="200" y="88" fill="#7E6A92" font-size="12" text-anchor="end">3 · 30%</text>
+</g>
+<g class="fade" style="animation-delay:0.86s">
+  <rect x="26" y="100" width="11" height="11" rx="2" fill="#7355dd"/>
+  <text x="45" y="110" fill="#B48EE0" font-size="13.5">C#</text>
+  <text x="200" y="110" fill="#7E6A92" font-size="12" text-anchor="end">2 · 20%</text>
+</g>
+<g class="fade" style="animation-delay:1.14s">
+  <rect x="26" y="122" width="11" height="11" rx="2" fill="#3572A5"/>
+  <text x="45" y="132" fill="#B48EE0" font-size="13.5">Python</text>
+  <text x="200" y="132" fill="#7E6A92" font-size="12" text-anchor="end">1 · 10%</text>
+</g>
+<circle class="ringbg" cx="300" cy="100" r="46" fill="none" stroke="#3A2550" stroke-width="20"/>
+<g class="glow"><circle cx="300" cy="100" r="46" fill="none" stroke="#b07219" stroke-width="20" pathLength="100"
+  stroke-dasharray="0 100" stroke-dashoffset="0.00" transform="rotate(-90 300 100)"
+  style="animation:s0 .55s ease-out 0.30s forwards"/>
+<circle cx="300" cy="100" r="46" fill="none" stroke="#f1e05a" stroke-width="20" pathLength="100"
+  stroke-dasharray="0 100" stroke-dashoffset="-40.00" transform="rotate(-90 300 100)"
+  style="animation:s1 .55s ease-out 0.58s forwards"/>
+<circle cx="300" cy="100" r="46" fill="none" stroke="#7355dd" stroke-width="20" pathLength="100"
+  stroke-dasharray="0 100" stroke-dashoffset="-70.00" transform="rotate(-90 300 100)"
+  style="animation:s2 .55s ease-out 0.86s forwards"/>
+<circle cx="300" cy="100" r="46" fill="none" stroke="#3572A5" stroke-width="20" pathLength="100"
+  stroke-dasharray="0 100" stroke-dashoffset="-90.00" transform="rotate(-90 300 100)"
+  style="animation:s3 .55s ease-out 1.14s forwards"/></g>
+<text class="n" x="300" y="104" fill="#E6DDF2" font-size="20" font-weight="700" text-anchor="middle" style="animation:on .001s 0.300s forwards, off .001s 0.460s forwards">0</text><text class="n" x="300" y="104" fill="#E6DDF2" font-size="20" font-weight="700" text-anchor="middle" style="animation:on .001s 0.460s forwards, off .001s 0.620s forwards">3</text><text class="n" x="300" y="104" fill="#E6DDF2" font-size="20" font-weight="700" text-anchor="middle" style="animation:on .001s 0.620s forwards, off .001s 0.780s forwards">5</text><text class="n" x="300" y="104" fill="#E6DDF2" font-size="20" font-weight="700" text-anchor="middle" style="animation:on .001s 0.780s forwards, off .001s 0.940s forwards">7</text><text class="n" x="300" y="104" fill="#E6DDF2" font-size="20" font-weight="700" text-anchor="middle" style="animation:on .001s 0.940s forwards, off .001s 1.100s forwards">8</text><text class="n" x="300" y="104" fill="#E6DDF2" font-size="20" font-weight="700" text-anchor="middle" style="animation:on .001s 1.100s forwards, off .001s 1.260s forwards">9</text><text class="n" x="300" y="104" fill="#E6DDF2" font-size="20" font-weight="700" text-anchor="middle" style="animation:on .001s 1.260s forwards">10</text>
+<text class="fade" x="300" y="120" fill="#7E6A92" font-size="11" text-anchor="middle" style="animation-delay:.5s">repos</text>
+</svg>
