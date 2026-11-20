@@ -69,7 +69,6 @@ public class Eric {
 
 - 💪 App fitness em Spring Boot + Angular
 
-
 ## 📊 Estatísticas
 
 <p align="center">
