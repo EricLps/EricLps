@@ -63,11 +63,13 @@ public class Eric {
 | 📦 [Stock API](https://github.com/EricLps/StockApi) | C# · ASP.NET Core · EF Core · SQL Server | Controle de estoque em camadas, migrations e logs com Serilog |
 | 🖼️ [Esteganografia](https://github.com/EricLps/esteganografia-java) | Java · POO | Esconde e extrai mensagens em imagens com a técnica LSB |
 
+
 ### 💻 Trabalhando atualmente
 
 - 🎨 Plugin para IntelliJ que troca os ícones das classes conforme a camada (Repository, Service, Controller...)
 
 - 💪 App fitness em Spring Boot + Angular
+
 
 ## 📊 Estatísticas
 
