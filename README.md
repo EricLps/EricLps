@@ -24,12 +24,14 @@
 
 ```java
 public class Eric {
+
     String cargo     = "Estagiário de Engenharia de Software @ Magazine Martins";
     String formacao  = "Análise e Desenvolvimento de Sistemas — UNICSUL (12/2026)";
     String foco      = "Back-end Java: APIs REST, arquitetura em camadas, JPA";
     String noTrabalho = "Node.js + SQL: rastreio de marketplaces (Mercado Livre, Shopee, TikTok Shop)";
     String[] estudando = { "Spring Security + JWT", "Angular", "TypeScript", "Testes automatizados" };
     String objetivo  = "Desenvolvedor Back-end Júnior Java";
+
 }
 ```
 
