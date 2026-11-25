@@ -10,13 +10,13 @@ import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
-const BAT_PNG = readFileSync(join(HERE, '..', 'assets', 'bat-sprite.png')).toString('base64');
+const DANTE_PNG = readFileSync(join(HERE, '..', 'assets', 'sprite', 'dante-0.png')).toString('base64');
 const [user = 'EricLps', outDir = 'dist'] = process.argv.slice(2);
 
 // ---------- paleta (a mesma do README) ----------
 const C = {
-  bg: '#0D0714', border: '#3A2550', purple: '#9D6BE0', lilac: '#B48EE0',
-  text: '#E6DDF2', muted: '#7E6A92', glow: '#C9A3FF',
+  bg: '#0D1117', border: '#3A0C0C', purple: '#930B0C', lilac: '#D4D4D4',
+  text: '#F0F0F0', muted: '#8A7A7A', glow: '#C1121F',
 };
 const FONT = `'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif`;
 
@@ -179,9 +179,9 @@ ${countUp(value, delay + 0.15, 1.1, `x="190" y="${y}" fill="${C.text}" font-size
 ${body}
 <defs><radialGradient id="h"><stop offset="0" stop-color="${C.purple}" stop-opacity=".55"/><stop offset="1" stop-color="${C.purple}" stop-opacity="0"/></radialGradient></defs>
 <circle class="halo" cx="308" cy="98" r="62" fill="url(#h)"/>
-<g class="fade" style="animation-delay:.4s"><g class="bob"><g class="flap">
-  <image x="254" y="72" width="108" height="53" href="data:image/png;base64,${BAT_PNG}" style="image-rendering:pixelated"/>
-</g></g></g>`);
+<g class="fade" style="animation-delay:.4s">
+  <image x="262" y="40" width="100" height="97" href="data:image/png;base64,${DANTE_PNG}" style="image-rendering:pixelated"/>
+</g>`);
 }
 
 // ---------- 4. card de linguagens por repositório ----------
@@ -289,7 +289,7 @@ function streakCard(d) {
   animation:fill 1.4s ease-out .2s forwards, pulse 2.4s ease-in-out 1.6s infinite}
 @keyframes fill{to{stroke-dashoffset:0}}
 @keyframes pulse{0%,100%{stroke:${C.purple};stroke-width:5}50%{stroke:${C.glow};stroke-width:6.5}}
-.fire{fill:${C.lilac};transform-origin:${CX}px 41px;animation:flicker .9s ease-in-out infinite}
+.fire{fill:${C.glow};transform-origin:${CX}px 41px;animation:flicker .9s ease-in-out infinite}
 @keyframes flicker{0%,100%{transform:scale(1,1) rotate(0)}25%{transform:scale(.9,1.1) rotate(-5deg)}
   50%{transform:scale(1.06,.94) rotate(4deg)}75%{transform:scale(.95,1.07) rotate(-2deg)}}`;
 
@@ -301,7 +301,7 @@ ${countUp(value, delay + 0.1, 1.1, `x="${x}" y="80" fill="${C.text}" font-size="
 </g>`;
 
   const longestDates = s.longest.len ? intervalo(s.longest.start, s.longest.end) : '—';
-  const currentDates = s.current.len ? intervalo(s.current.start, s.current.end) : 'comece hoje 🦇';
+  const currentDates = s.current.len ? intervalo(s.current.start, s.current.end) : 'comece hoje';
   const firstDates = s.first ? `${dataBR(s.first, true)} – hoje` : '—';
 
   return card(W, H, `Sequência de contribuições de ${user}`, css, `
