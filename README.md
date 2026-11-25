@@ -16,7 +16,7 @@
   <img src="https://komarev.com/ghpvc/?username=EricLps&label=visitantes&color=930b0c&style=for-the-badge" alt="Visitantes"/>
 </p>
 
-<h2><img src="assets/titles/sobre-mim.svg" height="40" alt="Sobre mim"/></h2>
+<h2><img src="assets/titles/sobre-mim.svg" height="56" alt="Sobre mim"/></h2>
 
 <img src="assets/dante.png" width="210" align="right" alt="Dante"/>
 
@@ -30,7 +30,7 @@
 
 <br clear="right"/>
 
-<h2><img src="assets/titles/style-rank.svg" height="40" alt="Style Rank"/></h2>
+<h2><img src="assets/titles/style-rank.svg" height="56" alt="Style Rank"/></h2>
 
 | Rank | | Stack |
 |:---:|:---|:---|
@@ -44,7 +44,7 @@
   <img src="https://skillicons.dev/icons?i=java,spring,postgres,ts,js,angular,react,nodejs,mysql,git,linux,kotlin,idea&theme=dark&perline=13" alt="skills"/>
 </p>
 
-<h2><img src="assets/titles/projetos.svg" height="40" alt="Projetos"/></h2>
+<h2><img src="assets/titles/projetos.svg" height="56" alt="Projetos"/></h2>
 
 | Projeto | Stack | O que faz |
 |---|---|---|
@@ -63,7 +63,7 @@
 
 </details>
 
-<h2><img src="assets/titles/estatisticas.svg" height="40" alt="Estatísticas"/></h2>
+<h2><img src="assets/titles/estatisticas.svg" height="56" alt="Estatísticas"/></h2>
 
 <p align="center">
   <img height="170" src="https://raw.githubusercontent.com/EricLps/EricLps/output/stats.svg" alt="Estatísticas"/>
@@ -78,7 +78,7 @@
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=EricLps&bg_color=0d1117&color=e5e5e5&line=930b0c&point=ffffff&area=true&area_color=6c0707&hide_border=true" width="100%" alt="activity"/>
 </p>
 
-<h2><img src="assets/titles/contribuicoes.svg" height="40" alt="Contribuições"/></h2>
+<h2><img src="assets/titles/contribuicoes.svg" height="56" alt="Contribuições"/></h2>
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/EricLps/EricLps/output/dante-contrib.svg" width="100%" alt="Dante atirando nas contribuições"/>
