@@ -4,9 +4,9 @@
 </p>
 
 <p align="center">
-  <img src="assets/titles/nome.svg" width="640" alt="Eric Lopes"/>
+  <img src="assets/titles/nome.svg" width="760" alt="Eric Lopes"/>
   <br/>
-  <img src="https://readme-typing-svg.demolab.com/?font=Cinzel&weight=600&size=24&duration=2600&pause=1200&color=C9C9C9&center=true&vCenter=true&width=700&height=40&lines=Desenvolvedor+Fullstack+J%C3%BAnior;Java+%C2%B7+Spring+Boot+%C2%B7+React;An%C3%A1lise+e+Desenvolvimento+de+Sistemas" alt="Desenvolvedor Fullstack Júnior"/>
+  <img src="https://readme-typing-svg.demolab.com/?font=Tilt+Neon&weight=400&size=24&duration=2600&pause=1200&color=FF6B74&center=true&vCenter=true&width=700&height=40&lines=Desenvolvedor+Fullstack+J%C3%BAnior;Java+%C2%B7+Spring+Boot+%C2%B7+React;An%C3%A1lise+e+Desenvolvimento+de+Sistemas" alt="Desenvolvedor Fullstack Júnior"/>
 </p>
 
 <p align="center">
