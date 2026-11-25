@@ -69,6 +69,12 @@
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=EricLps&bg_color=0d1117&color=e5e5e5&line=930b0c&point=ffffff&area=true&area_color=6c0707&hide_border=true" width="100%" alt="activity"/>
 </p>
 
+<h2><img src="https://readme-typing-svg.demolab.com/?font=Grenze+Gotisch&weight=600&size=34&duration=900&pause=100000&repeat=false&color=A31312&vCenter=true&width=420&height=48&lines=Contribuições" alt="Contribuições"/></h2>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/EricLps/EricLps/output/dante-contrib.svg" width="100%" alt="Dante atirando nas contribuições"/>
+</p>
+
 <!-- ===================== FOOTER ===================== -->
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=venom&height=140&section=footer&color=0:930b0c,50:6c0707,100:0d1117" width="100%" alt="footer"/>
