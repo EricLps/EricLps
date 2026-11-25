@@ -1,7 +1,7 @@
-# Gera, de hora em hora, a animação do morcego comendo o gráfico de contribuições
+# Gera, de hora em hora, a animação do Dante atirando no gráfico de contribuições
 # e os cards animados (estatísticas, linguagens e sequência), e publica os SVGs na branch `output`.
 # Tudo fica num workflow só porque a publicação substitui a branch `output` inteira.
-name: Bat contributions
+name: Dante contributions
 
 on:
   schedule:
@@ -24,8 +24,8 @@ jobs:
         with:
           node-version: 22
 
-      - name: Gerar SVGs do morcego
-        run: node scripts/bat-contrib.mjs "${{ github.repository_owner }}" dist
+      - name: Gerar SVG do Dante atirando nas contribuições
+        run: python3 scripts/dante_contrib.py --user "${{ github.repository_owner }}" --out dist/dante-contrib.svg
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
