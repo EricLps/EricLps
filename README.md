@@ -4,9 +4,9 @@
 </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com/?font=Grenze+Gotisch&weight=600&size=64&duration=1200&pause=100000&repeat=false&color=E5E5E5&center=true&vCenter=true&width=700&height=90&lines=Eric+Lopes" alt="Eric Lopes"/>
+  <img src="assets/titles/nome.svg" width="640" alt="Eric Lopes"/>
   <br/>
-  <img src="https://readme-typing-svg.demolab.com/?font=Grenze+Gotisch&weight=600&size=28&duration=2600&pause=1200&color=A31312&center=true&vCenter=true&width=700&height=45&lines=Desenvolvedor+Back-end+Java;Java+%C2%B7+Spring+Boot+%C2%B7+React;Estudante+de+ADS+na+Cruzeiro+do+Sul" alt="typing"/>
+  <img src="https://readme-typing-svg.demolab.com/?font=Cinzel&weight=600&size=24&duration=2600&pause=1200&color=C9C9C9&center=true&vCenter=true&width=700&height=40&lines=Desenvolvedor+Fullstack+J%C3%BAnior;Java+%C2%B7+Spring+Boot+%C2%B7+React;An%C3%A1lise+e+Desenvolvimento+de+Sistemas" alt="Desenvolvedor Fullstack Júnior"/>
 </p>
 
 <p align="center">
@@ -16,7 +16,7 @@
   <img src="https://komarev.com/ghpvc/?username=EricLps&label=visitantes&color=930b0c&style=for-the-badge" alt="Visitantes"/>
 </p>
 
-<h2><img src="https://readme-typing-svg.demolab.com/?font=Grenze+Gotisch&weight=600&size=34&duration=900&pause=100000&repeat=false&color=A31312&vCenter=true&width=420&height=48&lines=Sobre+mim" alt="Sobre mim"/></h2>
+<h2><img src="assets/titles/sobre-mim.svg" height="40" alt="Sobre mim"/></h2>
 
 <img src="assets/dante.png" width="210" align="right" alt="Dante"/>
 
@@ -30,7 +30,7 @@
 
 <br clear="right"/>
 
-<h2><img src="https://readme-typing-svg.demolab.com/?font=Grenze+Gotisch&weight=600&size=34&duration=900&pause=100000&repeat=false&color=A31312&vCenter=true&width=420&height=48&lines=Style+Rank" alt="Style Rank"/></h2>
+<h2><img src="assets/titles/style-rank.svg" height="40" alt="Style Rank"/></h2>
 
 | Rank | | Stack |
 |:---:|:---|:---|
@@ -44,17 +44,26 @@
   <img src="https://skillicons.dev/icons?i=java,spring,postgres,ts,js,angular,react,nodejs,mysql,git,linux,kotlin,idea&theme=dark&perline=13" alt="skills"/>
 </p>
 
-<h2><img src="https://readme-typing-svg.demolab.com/?font=Grenze+Gotisch&weight=600&size=34&duration=900&pause=100000&repeat=false&color=A31312&vCenter=true&width=420&height=48&lines=Projetos" alt="Projetos"/></h2>
+<h2><img src="assets/titles/projetos.svg" height="40" alt="Projetos"/></h2>
 
 | Projeto | Stack | O que faz |
 |---|---|---|
-| [Task Management API](https://github.com/EricLps/TaskListApi) | Java 21 · Spring Boot · JPA · Docker | CRUD com paginação, validações, `@ControllerAdvice` e Swagger |
-| [Stock API](https://github.com/EricLps/StockApi) | C# · ASP.NET Core · EF Core · SQL Server | Controle de estoque em camadas, migrations e logs com Serilog |
-| [Esteganografia](https://github.com/EricLps/esteganografia-java) | Java · POO | Esconde e extrai mensagens em imagens com a técnica LSB |
+| [Task Management API](https://github.com/EricLps/TaskListApi) | Java 21 · Spring Boot · Spring Data JPA · H2 · Docker | API REST de tarefas em camadas, com CRUD, paginação, Swagger e tratamento global de exceções |
+| [Emissor de Notas Fiscais](https://github.com/EricLps/microsservicos-notas-fiscais) | C# · ASP.NET Core · EF Core · PostgreSQL · Angular | Microsserviços de estoque e faturamento via REST, com reserva temporária de estoque e controle de concorrência otimista |
+| [Fornada Certa](https://github.com/EricLps/fornada-certa-web) | Java 21 · Spring Boot · PostgreSQL · Flyway · Angular | Controle de sobras de padaria: custo da perda e sugestão de produção pela média de vendas, com testes em JUnit e Mockito |
 
-**Em andamento:** app fitness com Spring Boot + Angular.
+<details open>
+<summary><b>Em andamento</b></summary>
+<br/>
 
-<h2><img src="https://readme-typing-svg.demolab.com/?font=Grenze+Gotisch&weight=600&size=34&duration=900&pause=100000&repeat=false&color=A31312&vCenter=true&width=420&height=48&lines=Estatísticas" alt="Estatísticas"/></h2>
+| | |
+|---|---|
+| [**pocket-wallet**](https://github.com/EricLps/pocket-wallet) | Carteira digital no estilo Pix: contas, saldo e chaves Pix · Java · Spring Boot · PostgreSQL · Angular |
+| **React + TypeScript** | Reta final do curso; o próximo passo é um projeto próprio em React |
+
+</details>
+
+<h2><img src="assets/titles/estatisticas.svg" height="40" alt="Estatísticas"/></h2>
 
 <p align="center">
   <img height="170" src="https://raw.githubusercontent.com/EricLps/EricLps/output/stats.svg" alt="Estatísticas"/>
@@ -69,7 +78,7 @@
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=EricLps&bg_color=0d1117&color=e5e5e5&line=930b0c&point=ffffff&area=true&area_color=6c0707&hide_border=true" width="100%" alt="activity"/>
 </p>
 
-<h2><img src="https://readme-typing-svg.demolab.com/?font=Grenze+Gotisch&weight=600&size=34&duration=900&pause=100000&repeat=false&color=A31312&vCenter=true&width=420&height=48&lines=Contribuições" alt="Contribuições"/></h2>
+<h2><img src="assets/titles/contribuicoes.svg" height="40" alt="Contribuições"/></h2>
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/EricLps/EricLps/output/dante-contrib.svg" width="100%" alt="Dante atirando nas contribuições"/>
